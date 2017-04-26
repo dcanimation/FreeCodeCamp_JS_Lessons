@@ -22,7 +22,6 @@ Starting Point
 function factorialize(num) {
   var numArr = [];
   var newNum = 1;
-  var factor;
   for (var i = 1; i < num + 1; i++) {
     numArr.push(i);
   }
