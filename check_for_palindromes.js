@@ -21,3 +21,23 @@ We'll also pass strings with special symbols, such as "2A3*3a2", "2A3 3a2", and 
   
 */
 
+function palindrome(str) {
+  var regExp = /\W/gi;            //create a variable to hold your regular expression. \W returns only non-alphanumeric characters
+  var strArr = [];                //create an array to hold your split string and to reverse it
+  var newStr;                     //creat a variable to hold your new string after joining the array
+  str = str.replace(regExp, '');  //.replace replaces all results from our expression with nothing (empty quotes)
+  str = str.toLowerCase();        //self explanatory
+  strArr = str.split('');         //split our string into an array using each character as the delimiter
+  strArr = strArr.reverse();      //reverse the order of the array
+  newStr = strArr.join('');       //join the array back into a string without a separator
+  console.log(str);
+  console.log(newStr);
+  if (newStr == str){             //if the original and new strings match return true
+    console.log("TRUE");
+    return true;
+  } else {
+    console.log("FALSE");
+    return false;
+  }
+  
+}
