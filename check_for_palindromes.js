@@ -22,7 +22,7 @@ We'll also pass strings with special symbols, such as "2A3*3a2", "2A3 3a2", and 
 */
 
 function palindrome(str) {
-  var regExp = /\W/gi;            //create a variable to hold your regular expression. \W returns only non-alphanumeric characters
+  var regExp = /\W+|_/gi;         //create a variable to hold your regular expression. \W returns only non-alphanumeric characters
   var strArr = [];                //create an array to hold your split string and to reverse it
   var newStr;                     //creat a variable to hold your new string after joining the array
   str = str.replace(regExp, '');  //.replace replaces all results from our expression with nothing (empty quotes)
