@@ -17,3 +17,22 @@ we would like you to use one of the JavaScript substring methods instead.
   
 */
 
+function confirmEnding(str, target) {
+  var strLen;
+  var targetLen;
+  var newStr;
+  strLen = str.length;
+  targetLen = target.length;
+  newStr = str.substring((strLen - targetLen), strLen);   //substring returns the value of the string index from the index start to index end
+  console.log(newStr);
+  if (newStr == target) {
+    console.log("TRUE");
+    return true;
+  } else {
+    console.log("FALSE");
+    return false;
+  }
+  
+}
+
+confirmEnding("Bastian the boy", "the boy");
