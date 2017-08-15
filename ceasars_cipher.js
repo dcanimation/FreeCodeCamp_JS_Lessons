@@ -19,3 +19,29 @@ All letters will be uppercase. Do not transform any non-alphabetic character (i.
   
 */
 
+var wrdStr;
+var newStr = [];
+var key13;
+function rot13(str) { // LBH QVQ VG!
+  str = str.split(" ");
+  //console.log(str);
+  for(var i = 0; i < str.length; i++){
+    wrdStr = str[i].split('');
+    console.log(wrdStr);
+    for(var j = 0; j < wrdStr.length; j++){
+      key13 = wrdStr[j].charCodeAt(0);
+      if (key13 >= 65 && key13 <= 91) {
+        key13 = key13 - 13;
+        if (key13 < 65){
+          key13 = key13 + 26;
+        }
+      }
+      wrdStr[j] = String.fromCharCode(key13);
+    }
+    wrdStr = wrdStr.join(''); 
+    newStr.push(wrdStr);
+  }
+  str = newStr.join(' ');
+  console.log(str);
+  return str;
+}
