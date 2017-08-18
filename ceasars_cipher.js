@@ -19,12 +19,11 @@ All letters will be uppercase. Do not transform any non-alphabetic character (i.
   
 */
 
-var wrdStr;
-var newStr = [];
-var key13;
 function rot13(str) { // LBH QVQ VG!
+  var wrdStr;
+  var newStr = [];
+  var key13;
   str = str.split(" ");
-  //console.log(str);
   for(var i = 0; i < str.length; i++){
     wrdStr = str[i].split('');
     console.log(wrdStr);
@@ -45,3 +44,6 @@ function rot13(str) { // LBH QVQ VG!
   console.log(str);
   return str;
 }
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
